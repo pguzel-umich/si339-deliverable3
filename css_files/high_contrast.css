@@ -1,0 +1,40 @@
+body.high-contrast {
+    color: white;
+    background-color: black;
+}
+
+body.high-contrast a,
+body.high-contrast h1 {
+    color: white;
+}
+
+body.high-contrast .navbar {
+    background-color: black;
+}
+
+body.high-contrast .navbar #nav-links li a {
+    background-color: white;
+    color: black;
+}
+
+body.high-contrast .navbar #nav-links li a:hover,
+body.high-contrast a:focus {
+    background-color: white;
+    color: black;
+}
+
+body.high-contrast th {
+    background-color: black;
+    color: white;
+}
+
+body.high-contrast .athlete_table_box,
+body.high-contrast .table_container {
+    background-color: whitesmoke;
+}
+
+body.high-contrast .team_img,
+body.high-contrast .athlete_img {
+    border: 3px solid white;
+    box-shadow: 0 0 4vw white;
+}

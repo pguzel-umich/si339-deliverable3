@@ -1,0 +1,27 @@
+body.light-mode {
+    color: #000;
+    background-color: whitesmoke;
+}
+
+body.light-mode a,
+body.light-mode h1 {
+    color: #000;
+}
+
+body.light-mode .navbar {
+    box-shadow: 0 0 4vw rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode .athlete_table_box,
+body.light-mode .table_container {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode th {
+    background-color: rgb(235, 235, 235);
+}
+
+body.light-mode .main_box #comment_box {
+    background-color: rgba(52, 49, 49, 0.1);
+
+}

@@ -9,7 +9,9 @@
     <link rel="icon" type="images/icon.png" href="images/icon.png">
 
     <link rel="stylesheet" href="css_files/reset.css"> 
-    <link rel="stylesheet" href="css_files/styles.css"> 
+    <link rel="stylesheet" href="css_files/default.css"> 
+    <link rel="stylesheet" href="css_files/light.css"> 
+    <link rel="stylesheet" href="css_files/high_contrast.css"> 
 
 </head>
 <body>
@@ -25,6 +27,15 @@
         </ul>
     </div>
 
+    <div class="modes">
+        <label for="theme-switch">Choose theme: </label>
+        <select id="theme-switch" class="theme-switch" onchange="document.body.className = this.value">
+            <option value="dark-mode">Default</option>
+            <option value="light-mode">Light Mode</option>
+            <option value="high-contrast">High Contrast</option>
+        </select>
+    </div>
+
     <!--Main box-->
     <div class="main_box">
      <!--Main box 1-->
@@ -34,10 +45,10 @@
             <h3> Ann Arbor 48104, MI </h3>
         </div>
         <!--Main box 2 Comments-->
-        <div id="comment_box">
-            <h2>Comments:</h2>
+        <div id="comment_box" tabindex="0">
+            <h2>Comments</h2>
             <div>
-                Team Comments and Announcements goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac risus id sem egestas mattis. Proin pellentesque diam eu orci tincidunt, sit amet congue quam tempor. Donec vulputate ligula eu eleifend viverra. Aenean congue aliquet dui et accumsan. Proin vulputate nisi et dolor convallis aliquam.
+                <p>Team Comments and Announcements goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac risus id sem egestas mattis. Proin pellentesque diam eu orci tincidunt, sit amet congue quam tempor. Donec vulputate ligula eu eleifend viverra. Aenean congue aliquet dui et accumsan. Proin vulputate nisi et dolor convallis aliquam.</p>
             </div>
         </div>
 
