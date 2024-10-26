@@ -6,44 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deliverable 3 - Personal</title> <!--Title TK-->
 
-    <link rel="icon" type="../images/icon.png" href="../images/icon.png">
+    <link rel="icon" type="images/icon.png" href="images/icon.png">
+
+    <link rel="stylesheet" href="../css_files/reset.css"> 
+    <link rel="stylesheet" href="../css_files/default.css"> 
+    <link rel="stylesheet" href="../css_files/light.css"> 
+    <link rel="stylesheet" href="../css_files/high_contrast.css"> 
 
 </head>
 <body>
+
+    <a href="#profile_box" class="fab">
+        <img src="../images/arrow_up.png" alt="Scroll to top" />
+    </a>
     
     <!--nav bar-->
-    <div id="tk1">
-        <a href="https://www.athletic.net/">
-            <img src="../images/site_logo.jpeg" alt="site logo" width="175" height="26"> <!-- IMG TK-->
+    <div class="navbar">
+        <a href="https://www.athletic.net/" id="logo">
+            <img src="../images/site_logo.jpeg" alt="site logo">
+            <!-- IMG TK-->
         </a>
-        <nav>
-            <ul>
-                <li><a href="https://www.google.com/">Login</a></li>
-            </ul>
-        </nav>
+        <ul id="nav-links">
+            <li><a href="https://www.google.com/">Login</a></li>
+        </ul>
+    </div>
+
+    <a href="#record_box" class="skip-to-content">Skip to Content</a>
+
+    <div class="modes">
+        <label for="theme-switch">Choose theme: </label>
+        <select id="theme-switch" class="theme-switch" onchange="document.body.className = this.value">
+            <option value="dark-mode">Default</option>
+            <option value="light-mode">Light Mode</option>
+            <option value="high-contrast">High Contrast</option>
+        </select>
     </div>
 
     <!--Main box-->
-    <div>
+    <div class="main_box">
      <!--Main box 1-->
-        <img src="team_insert_name.jpg" alt="team insert name logo" width="175" height="175">
-        <h1><a href="../index.html">Team Insert Name</a></h1>
-        <h3> 48104, MI </h3>
-    </div>
+        <div id="team_box">
+            <a href="../index.html" tabindex="-1">
+                <img src="../images/aa_skyline.jpg" class="team_img" alt="team Ann Arbor Skyline logo" width="175" height="175">
+            </a>
+            <h1><a href="../index.html">Ann Arbor Skyline</a></h1>
+            <h3> Ann Arbor 48104, MI </h3>
+        </div>
 
-    <div>
-        <img src="../images/default_image.jpg" class="athlete_img" alt="img of Raphael Fournier, id: ['23564875']">
+    <div id="profile_box">
+        <img src="../images/AthleteImages/23564875.jpg" class="athlete_img" alt="img of Raphael Fournier, id: ['23564875']">
         <h2>Raphael Fournier</h2>
         23564875
+
+        <div class="athlete-performance">
+            <div class="progress-container">
+                <div class="progress-bar" style="--progress: 13%; --color: #4caf50;"></div>
+            </div>
+            <p style="font-weight: bold;">Performance over time bar is coming soon</p>
+        </div>
     </div>
-    <h2>Season Record</h2>
-    <table>
-        <tr>
-            <th>Overall Place</th>
-            <th>Grade</th>
-            <th>Time</th>
-        <tr>
-        
+
+    <div id="season_box">
+        <h2>Season Record</h2>
+
+        <table id="athlete_personal">
+            <tr>
+                <th>Overall Place</th>
+                <th>Grade</th>
+                <th>Time</th>
+            <tr>
+            
             <tr>
                 <td>2023</td>
                 <td>9</td>
@@ -56,112 +88,117 @@
                 <td>18:46.1PR *</td>
             </tr>
         
-    </table>
-    <h3>Career Record</h3>
-    <table>
-        <tr>
-            <th>Overall Place</th>
-            <th>Time</th>
-            <th>Date</th>
-            <th>Meet</th>
-            <th>Comments</th>
-        <tr>
-        
+        </table>
+    </div>
+
+    <div id="record_box">
+        <h3>Career Record</h3>
+        <table id="athlete_personal">
             <tr>
-                <td>85 </td>
-                <td>19:14.7</td>
-                <td>Aug 29</td>
-                <td>37th Early Bird Open (HS Open 5K)</td>
-                <td></td>
+                <th id="important">Overall Place</th>
+                <th id="important">Time</th>
+                <th id="notimportant">Date</th>
+                <th id="important">Meet</th>
+                <th id="notimportant">Comments</th>
+            <tr>
+            
+            <tr>
+                <td id="important">85 </td>
+                <td id="important">19:14.7</td>
+                <td id="notimportant">Aug 29</td>
+                <td id="important">37th Early Bird Open (HS Open 5K)</td>
+                <td id="notimportant"></td>
             </tr>
         
             <tr>
-                <td>11 </td>
-                <td>18:46.1PR</td>
-                <td>Sep 7</td>
-                <td>Bret Clements Bath Invitational (J.V.)</td>
-                <td>I think you might've outrun the course map! Keep it up, and we’ll need GPS tracking.</td>
+                <td id="important">11 </td>
+                <td id="important">18:46.1PR</td>
+                <td id="notimportant">Sep 7</td>
+                <td id="important">Bret Clements Bath Invitational (J.V.)</td>
+                <td id="notimportant">I think you might've outrun the course map! Keep it up, and we’ll need GPS tracking.</td>
             </tr>
         
             <tr>
-                <td>22 </td>
-                <td>19:58.1</td>
-                <td>Sep 10</td>
-                <td>SEC Jamboree #1 (Junior Varsity)</td>
-                <td>I blinked and missed the first half of your race! That was quick!</td>
+                <td id="important">22 </td>
+                <td id="important">19:58.1</td>
+                <td id="notimportant">Sep 10</td>
+                <td id="important">SEC Jamboree #1 (Junior Varsity)</td>
+                <td id="notimportant">I blinked and missed the first half of your race! That was quick!</td>
             </tr>
         
             <tr>
-                <td>32 </td>
-                <td>18:57.1</td>
-                <td>Sep 14</td>
-                <td>56th Holly-Duane Raffin Festival of Races (D1 JV Boys)</td>
-                <td>Nice work! By the way, you know this is a race, not a scenic tour, right?</td>
+                <td id="important">32 </td>
+                <td id="important">18:57.1</td>
+                <td id="notimportant">Sep 14</td>
+                <td id="important">56th Holly-Duane Raffin Festival of Races (D1 JV Boys)</td>
+                <td id="notimportant">Nice work! By the way, you know this is a race, not a scenic tour, right?</td>
             </tr>
         
             <tr>
-                <td>85 </td>
-                <td>20:40.1</td>
-                <td>Aug 31</td>
-                <td>Early Bird Open (Open Men's 5K)</td>
-                <td>That was a great race! Next time, try running *on* the path though.</td>
+                <td id="important">85 </td>
+                <td id="important">20:40.1</td>
+                <td id="notimportant">Aug 31</td>
+                <td id="important">Early Bird Open (Open Men's 5K)</td>
+                <td id="notimportant">That was a great race! Next time, try running *on* the path though.</td>
             </tr>
         
             <tr>
-                <td>65 </td>
-                <td>20:16.2</td>
-                <td>Sep 13</td>
-                <td>SEC-HS Jamboree 1 (All Division Reserve BOYS)</td>
-                <td></td>
+                <td id="important">65 </td>
+                <td id="important">20:16.2</td>
+                <td id="notimportant">Sep 13</td>
+                <td id="important">SEC-HS Jamboree 1 (All Division Reserve BOYS)</td>
+                <td id="notimportant"></td>
             </tr>
         
             <tr>
-                <td>90 </td>
-                <td>20:29.2</td>
-                <td>Sep 16</td>
-                <td>55th Holly/Duane Raffin Festival of Races (D1 JV Boys)</td>
-                <td></td>
+                <td id="important">90 </td>
+                <td id="important">20:29.2</td>
+                <td id="notimportant">Sep 16</td>
+                <td id="important">55th Holly/Duane Raffin Festival of Races (D1 JV Boys)</td>
+                <td id="notimportant"></td>
             </tr>
         
             <tr>
-                <td>70 </td>
-                <td>20:29.1</td>
-                <td>Sep 27</td>
-                <td>SEC Jamboree 2 (Red) (Reserve Wave 1 (<21:00))</td>
-                <td>You made some great moves on the hills. Keep working on your endurance.</td>
+                <td id="important">70 </td>
+                <td id="important">20:29.1</td>
+                <td id="notimportant">Sep 27</td>
+                <td id="important">SEC Jamboree 2 (Red) (Reserve Wave 1 (<21:00))</td>
+                <td id="notimportant">You made some great moves on the hills. Keep working on your endurance.</td>
             </tr>
         
             <tr>
-                <td>213 </td>
-                <td>19:57.6</td>
-                <td>Oct 7</td>
-                <td>2023 Portage XC Invitational (Division 1 Reserve)</td>
-                <td>Your speed was impressive, but next time, try not to leave the spectators in the dust... literally!</td>
+                <td id="important">213 </td>
+                <td id="important">19:57.6</td>
+                <td id="notimportant">Oct 7</td>
+                <td id="important">2023 Portage XC Invitational (Division 1 Reserve)</td>
+                <td id="notimportant">Your speed was impressive, but next time, try not to leave the spectators in the dust... literally!</td>
             </tr>
         
             <tr>
-                <td>52 </td>
-                <td>19:45.1</td>
-                <td>Oct 14</td>
-                <td>39th Fr Gabriel Richard Cross Country Invite (JV Large School Div)</td>
-                <td>Well, you didn’t set a world record, but you definitely set a team snack record!</td>
+                <td id="important">52 </td>
+                <td id="important">19:45.1</td>
+                <td id="notimportant">Oct 14</td>
+                <td id="important">39th Fr Gabriel Richard Cross Country Invite (JV Large School Div)</td>
+                <td id="notimportant">Well, you didn’t set a world record, but you definitely set a team snack record!</td>
             </tr>
         
             <tr>
-                <td>109 </td>
-                <td>21:00.6</td>
-                <td>Oct 19</td>
-                <td>SEC HS Championship (All Division Reserve)</td>
-                <td>Are you sure you're not part cheetah? That was fast!</td>
+                <td id="important">109 </td>
+                <td id="important">21:00.6</td>
+                <td id="notimportant">Oct 19</td>
+                <td id="important">SEC HS Championship (All Division Reserve)</td>
+                <td id="notimportant">Are you sure you're not part cheetah? That was fast!</td>
             </tr>
         
             <tr>
-                <td>29 </td>
-                <td>19:18.0 SR</td>
-                <td>Oct 28</td>
-                <td>Post Regional Open Meet (PROM) - Springfiled Oaks</td>
-                <td></td>
+                <td id="important">29 </td>
+                <td id="important">19:18.0 SR</td>
+                <td id="notimportant">Oct 28</td>
+                <td id="important">Post Regional Open Meet (PROM) - Springfiled Oaks</td>
+                <td id="notimportant"></td>
             </tr>
         
-    </table>
+        </table>
+    </div>
+
     

@@ -6,44 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deliverable 3 - Personal</title> <!--Title TK-->
 
-    <link rel="icon" type="../images/icon.png" href="../images/icon.png">
+    <link rel="icon" type="images/icon.png" href="images/icon.png">
+
+    <link rel="stylesheet" href="../css_files/reset.css"> 
+    <link rel="stylesheet" href="../css_files/default.css"> 
+    <link rel="stylesheet" href="../css_files/light.css"> 
+    <link rel="stylesheet" href="../css_files/high_contrast.css"> 
 
 </head>
 <body>
+
+    <a href="#profile_box" class="fab">
+        <img src="../images/arrow_up.png" alt="Scroll to top" />
+    </a>
     
     <!--nav bar-->
-    <div id="tk1">
-        <a href="https://www.athletic.net/">
-            <img src="../images/site_logo.jpeg" alt="site logo" width="175" height="26"> <!-- IMG TK-->
+    <div class="navbar">
+        <a href="https://www.athletic.net/" id="logo">
+            <img src="../images/site_logo.jpeg" alt="site logo">
+            <!-- IMG TK-->
         </a>
-        <nav>
-            <ul>
-                <li><a href="https://www.google.com/">Login</a></li>
-            </ul>
-        </nav>
+        <ul id="nav-links">
+            <li><a href="https://www.google.com/">Login</a></li>
+        </ul>
+    </div>
+
+    <a href="#record_box" class="skip-to-content">Skip to Content</a>
+
+    <div class="modes">
+        <label for="theme-switch">Choose theme: </label>
+        <select id="theme-switch" class="theme-switch" onchange="document.body.className = this.value">
+            <option value="dark-mode">Default</option>
+            <option value="light-mode">Light Mode</option>
+            <option value="high-contrast">High Contrast</option>
+        </select>
     </div>
 
     <!--Main box-->
-    <div>
+    <div class="main_box">
      <!--Main box 1-->
-        <img src="team_insert_name.jpg" alt="team insert name logo" width="175" height="175">
-        <h1><a href="../index.html">Team Insert Name</a></h1>
-        <h3> 48104, MI </h3>
-    </div>
+        <div id="team_box">
+            <a href="../index.html" tabindex="-1">
+                <img src="../images/aa_skyline.jpg" class="team_img" alt="team Ann Arbor Skyline logo" width="175" height="175">
+            </a>
+            <h1><a href="../index.html">Ann Arbor Skyline</a></h1>
+            <h3> Ann Arbor 48104, MI </h3>
+        </div>
 
-    <div>
-        <img src="../images/default_image.jpg" class="athlete_img" alt="img of Dylan Hanley, id: ['23349680']">
+    <div id="profile_box">
+        <img src="../images/AthleteImages/23349680.jpg" class="athlete_img" alt="img of Dylan Hanley, id: ['23349680']">
         <h2>Dylan Hanley</h2>
         23349680
+
+        <div class="athlete-performance">
+            <div class="progress-container">
+                <div class="progress-bar" style="--progress: 35%; --color: #4caf50;"></div>
+            </div>
+            <p style="font-weight: bold;">Performance over time bar is coming soon</p>
+        </div>
     </div>
-    <h2>Season Record</h2>
-    <table>
-        <tr>
-            <th>Overall Place</th>
-            <th>Grade</th>
-            <th>Time</th>
-        <tr>
-        
+
+    <div id="season_box">
+        <h2>Season Record</h2>
+
+        <table id="athlete_personal">
+            <tr>
+                <th>Overall Place</th>
+                <th>Grade</th>
+                <th>Time</th>
+            <tr>
+            
             <tr>
                 <td>2023</td>
                 <td>9</td>
@@ -56,64 +88,69 @@
                 <td>18:13.9PR *</td>
             </tr>
         
-    </table>
-    <h3>Career Record</h3>
-    <table>
-        <tr>
-            <th>Overall Place</th>
-            <th>Time</th>
-            <th>Date</th>
-            <th>Meet</th>
-            <th>Comments</th>
-        <tr>
-        
+        </table>
+    </div>
+
+    <div id="record_box">
+        <h3>Career Record</h3>
+        <table id="athlete_personal">
             <tr>
-                <td>86 </td>
-                <td>19:15.6</td>
-                <td>Aug 29</td>
-                <td>37th Early Bird Open (HS Open 5K)</td>
-                <td></td>
+                <th id="important">Overall Place</th>
+                <th id="important">Time</th>
+                <th id="notimportant">Date</th>
+                <th id="important">Meet</th>
+                <th id="notimportant">Comments</th>
+            <tr>
+            
+            <tr>
+                <td id="important">86 </td>
+                <td id="important">19:15.6</td>
+                <td id="notimportant">Aug 29</td>
+                <td id="important">37th Early Bird Open (HS Open 5K)</td>
+                <td id="notimportant"></td>
             </tr>
         
             <tr>
-                <td>7 </td>
-                <td>18:25.2</td>
-                <td>Sep 7</td>
-                <td>Bret Clements Bath Invitational (J.V.)</td>
-                <td></td>
+                <td id="important">7 </td>
+                <td id="important">18:25.2</td>
+                <td id="notimportant">Sep 7</td>
+                <td id="important">Bret Clements Bath Invitational (J.V.)</td>
+                <td id="notimportant"></td>
             </tr>
         
             <tr>
-                <td>12 </td>
-                <td>19:13.5</td>
-                <td>Sep 10</td>
-                <td>SEC Jamboree #1 (Junior Varsity)</td>
-                <td></td>
+                <td id="important">12 </td>
+                <td id="important">19:13.5</td>
+                <td id="notimportant">Sep 10</td>
+                <td id="important">SEC Jamboree #1 (Junior Varsity)</td>
+                <td id="notimportant"></td>
             </tr>
         
             <tr>
-                <td>13 </td>
-                <td>18:13.9PR</td>
-                <td>Sep 14</td>
-                <td>56th Holly-Duane Raffin Festival of Races (D1 JV Boys)</td>
-                <td>Your pacing was solid today. Let's focus on maintaining it throughout the race.</td>
+                <td id="important">13 </td>
+                <td id="important">18:13.9PR</td>
+                <td id="notimportant">Sep 14</td>
+                <td id="important">56th Holly-Duane Raffin Festival of Races (D1 JV Boys)</td>
+                <td id="notimportant">Your pacing was solid today. Let's focus on maintaining it throughout the race.</td>
             </tr>
         
             <tr>
-                <td>89 </td>
-                <td>21:00.3</td>
-                <td>Aug 31</td>
-                <td>Early Bird Open (Open Men's 5K)</td>
-                <td>Your pacing was solid today. Let's focus on maintaining it throughout the race.</td>
+                <td id="important">89 </td>
+                <td id="important">21:00.3</td>
+                <td id="notimportant">Aug 31</td>
+                <td id="important">Early Bird Open (Open Men's 5K)</td>
+                <td id="notimportant">Your pacing was solid today. Let's focus on maintaining it throughout the race.</td>
             </tr>
         
             <tr>
-                <td>53 </td>
-                <td>19:51.8 SR</td>
-                <td>Oct 28</td>
-                <td>Post Regional Open Meet (PROM) - Springfiled Oaks</td>
-                <td>Great run! If only we could bottle that energy for Monday mornings.</td>
+                <td id="important">53 </td>
+                <td id="important">19:51.8 SR</td>
+                <td id="notimportant">Oct 28</td>
+                <td id="important">Post Regional Open Meet (PROM) - Springfiled Oaks</td>
+                <td id="notimportant">Great run! If only we could bottle that energy for Monday mornings.</td>
             </tr>
         
-    </table>
+        </table>
+    </div>
+
     
