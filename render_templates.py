@@ -1,6 +1,8 @@
 import csv
 import os
 import json
+import random
+
 
 # Read from the csv files (all??) in directory
 male_athelete_dir = "drive_download/athletes/mens_team"
@@ -106,7 +108,9 @@ index_html_template = f"""
     <link rel="icon" type="images/icon.png" href="images/icon.png">
 
     <link rel="stylesheet" href="css_files/reset.css"> 
-    <link rel="stylesheet" href="css_files/styles.css"> 
+    <link rel="stylesheet" href="css_files/default.css"> 
+    <link rel="stylesheet" href="css_files/light.css"> 
+    <link rel="stylesheet" href="css_files/high_contrast.css"> 
 
 </head>
 <body>
@@ -122,19 +126,30 @@ index_html_template = f"""
         </ul>
     </div>
 
+    <div class="modes">
+        <label for="theme-switch">Choose theme: </label>
+        <select id="theme-switch" class="theme-switch" onchange="document.body.className = this.value">
+            <option value="dark-mode">Default</option>
+            <option value="light-mode">Light Mode</option>
+            <option value="high-contrast">High Contrast</option>
+        </select>
+    </div>
+
     <!--Main box-->
     <div class="main_box">
      <!--Main box 1-->
         <div id="team_box">
-            <img src="images/aa_skyline.jpg" class="team_img" alt="team Ann Arbor Skyline logo" width="175" height="175">
+            <a href="index.html" tabindex="-1">
+                <img src="images/aa_skyline.jpg" class="team_img" alt="team Ann Arbor Skyline logo" width="175" height="175">
+            </a>
             <h1><a href="index.html">Ann Arbor Skyline</a></h1>
             <h3> Ann Arbor 48104, MI </h3>
         </div>
         <!--Main box 2 Comments-->
-        <div id="comment_box">
-            <h2>Comments:</h2>
+        <div id="comment_box" tabindex="0">
+            <h2>Comments</h2>
             <div>
-                Team Comments and Announcements goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac risus id sem egestas mattis. Proin pellentesque diam eu orci tincidunt, sit amet congue quam tempor. Donec vulputate ligula eu eleifend viverra. Aenean congue aliquet dui et accumsan. Proin vulputate nisi et dolor convallis aliquam.
+                <p>Team Comments and Announcements goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac risus id sem egestas mattis. Proin pellentesque diam eu orci tincidunt, sit amet congue quam tempor. Donec vulputate ligula eu eleifend viverra. Aenean congue aliquet dui et accumsan. Proin vulputate nisi et dolor convallis aliquam.</p>
             </div>
         </div>
 
@@ -166,13 +181,12 @@ index_html_template = f"""
         </div>
 
         <!--Main box 4-->
-        <footer id="footer">
+        <footer class="footer">
             <nav>
                 <ul>
                     <li><a href="https://www.google.com/">Credidentials</a></li> 
-                    <li><a href="https://www.google.com/">For Coaches</a></li> 
-                    <li><a href="">Charlie H</a></li>
-                    <li><a href="">Poyraz G</a></li>
+                    <li><p>Charlie H from Deliverable 2</p></li>
+                    <li><p>Poyraz G from Deliverable 2 and 3</p></li>
                 </ul> 
             </nav>
         </footer>
@@ -205,11 +219,11 @@ def career_record(athletic_dict):
     for record in athletic_dict['career']:
         temp_html += f"""
             <tr>
-                <td>{record[1]}</td>
-                <td>{record[3]}</td>
-                <td>{record[4]}</td>
-                <td>{record[5]}</td>
-                <td>{record[6]}</td>
+                <td id="important">{record[1]}</td>
+                <td id="important">{record[3]}</td>
+                <td id="notimportant">{record[4]}</td>
+                <td id="important">{record[5]}</td>
+                <td id="notimportant">{record[6]}</td>
             </tr>
         """
     return temp_html
@@ -220,38 +234,58 @@ def career_record(athletic_dict):
 # print(career_record(athlete_data_male[0]))
 
 def render_student_html(athlete_dict, template_html):
-    image_path = f"../images/AthleteImages/{athlete_dict['id'][0]}.jpg"
+    image_path = f"images/AthleteImages/{athlete_dict['id'][0]}.jpg"
     if not os.path.exists(image_path):
-        image_path = "../images/default_image.jpg"
+        image_path = "images/default_image.jpg"
+    else:
+        image_path = f"../images/AthleteImages/{athlete_dict['id'][0]}.jpg"
+
+
+    random_value = random.randint(25, 85)
 
     temp_html = ""
     # Everything after title
     temp_html = f"""
-    <div>
+    <div id="profile_box">
         <img src="{image_path}" class="athlete_img" alt="img of {athlete_dict['name'][0]}, id: {athlete_dict['id']}">
         <h2>{athlete_dict['name'][0]}</h2>
         {athlete_dict['id'][0]}
+
+        <div class="athlete-performance">
+            <div class="progress-container">
+                <div class="progress-bar" style="--progress: {random_value}%; --color: #4caf50;"></div>
+            </div>
+            <p style="font-weight: bold;">Performance over time bar is coming soon</p>
+        </div>
     </div>
-    <h2>Season Record</h2>
-    <table>
-        <tr>
-            <th>Overall Place</th>
-            <th>Grade</th>
-            <th>Time</th>
-        <tr>
-        {season_record(athlete_dict)}
-    </table>
-    <h3>Career Record</h3>
-    <table>
-        <tr>
-            <th>Overall Place</th>
-            <th>Time</th>
-            <th>Date</th>
-            <th>Meet</th>
-            <th>Comments</th>
-        <tr>
-        {career_record(athlete_dict)}
-    </table>
+
+    <div id="season_box">
+        <h2>Season Record</h2>
+
+        <table id="athlete_personal">
+            <tr>
+                <th>Overall Place</th>
+                <th>Grade</th>
+                <th>Time</th>
+            <tr>
+            {season_record(athlete_dict)}
+        </table>
+    </div>
+
+    <div id="record_box">
+        <h3>Career Record</h3>
+        <table id="athlete_personal">
+            <tr>
+                <th id="important">Overall Place</th>
+                <th id="important">Time</th>
+                <th id="notimportant">Date</th>
+                <th id="important">Meet</th>
+                <th id="notimportant">Comments</th>
+            <tr>
+            {career_record(athlete_dict)}
+        </table>
+    </div>
+
     """
     template_html += temp_html
     return template_html
@@ -273,28 +307,50 @@ student_html_template = f"""
 
     <link rel="icon" type="../images/icon.png" href="../images/icon.png">
 
+    <link rel="stylesheet" href="../css_files/reset.css"> 
+    <link rel="stylesheet" href="../css_files/default.css"> 
+    <link rel="stylesheet" href="../css_files/light.css"> 
+    <link rel="stylesheet" href="../css_files/high_contrast.css"> 
+
 </head>
 <body>
+
+    <a href="#profile_box" class="fab">
+        <img src="../images/arrow_up.png" alt="Scroll to top" />
+    </a>
     
     <!--nav bar-->
-    <div id="tk1">
-        <a href="https://www.athletic.net/">
-            <img src="../images/site_logo.jpeg" alt="site logo" width="175" height="26"> <!-- IMG TK-->
+    <div class="navbar">
+        <a href="https://www.athletic.net/" id="logo">
+            <img src="../images/site_logo.jpeg" alt="site logo">
+            <!-- IMG TK-->
         </a>
-        <nav>
-            <ul>
-                <li><a href="https://www.google.com/">Login</a></li>
-            </ul>
-        </nav>
+        <ul id="nav-links">
+            <li><a href="https://www.google.com/">Login</a></li>
+        </ul>
+    </div>
+
+    <a href="#record_box" class="skip_to_content">Skip to Content</a>
+
+    <div class="modes">
+        <label for="theme-switch">Choose theme: </label>
+        <select id="theme-switch" class="theme-switch" onchange="document.body.className = this.value">
+            <option value="dark-mode">Default</option>
+            <option value="light-mode">Light Mode</option>
+            <option value="high-contrast">High Contrast</option>
+        </select>
     </div>
 
     <!--Main box-->
-    <div>
+    <div class="main_box">
      <!--Main box 1-->
-        <img src="team_insert_name.jpg" alt="team insert name logo" width="175" height="175">
-        <h1><a href="../index.html">Team Insert Name</a></h1>
-        <h3> 48104, MI </h3>
-    </div>
+        <div id="team_box">
+            <a href="../index.html" tabindex="-1">
+                <img src="../images/aa_skyline.jpg" class="team_img" alt="team Ann Arbor Skyline logo" width="175" height="175">
+            </a>
+            <h1><a href="../index.html">Ann Arbor Skyline</a></h1>
+            <h3> Ann Arbor 48104, MI </h3>
+        </div>
 """
 
 render_html(athlete_data_male, student_html_template)

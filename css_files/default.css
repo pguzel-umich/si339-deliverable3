@@ -1,4 +1,4 @@
-/* Default Dark Mode */
+/* Dark Mode */
 body {
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
@@ -161,7 +161,7 @@ tbody tr:nth-child(odd) .athlete_table_box,
 
 tbody tr:nth-child(even) .athlete_table_box,
 tr:nth-child(even) #athlete_personal {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* images and athlete names */
@@ -276,12 +276,12 @@ html {
     transform: scale(1.1);
 }
 
-.skip-to-content {
+.skip_to_content {
     display: block;
     width: fit-content;
     margin: 15px auto;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: blue;
     color: #ffffff;
     font-size: 16px;
     text-decoration: none;
@@ -338,5 +338,12 @@ html {
 
     100% {
         width: var(--progress);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
     }
 }

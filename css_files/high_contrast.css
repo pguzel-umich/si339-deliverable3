@@ -1,40 +1,60 @@
+/* high-contrast Mode */
+
+* {
+    font-weight: bolder;
+}
+
+body.high-contrast .skip_to_content {
+    color: whitesmoke;
+}
+
 body.high-contrast {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: whitesmoke;
 }
 
 body.high-contrast a,
 body.high-contrast h1 {
-    color: white;
+    color: black;
 }
 
 body.high-contrast .navbar {
-    background-color: black;
+    background-color: white;
+    box-shadow: 0 0 4vw rgba(0, 0, 0, 0.5);
 }
 
 body.high-contrast .navbar #nav-links li a {
-    background-color: white;
-    color: black;
+    background-color: blue;
+    color: white;
 }
 
 body.high-contrast .navbar #nav-links li a:hover,
 body.high-contrast a:focus {
-    background-color: white;
+    background-color: whitesmoke;
     color: black;
 }
 
 body.high-contrast th {
-    background-color: black;
-    color: white;
-}
-
-body.high-contrast .athlete_table_box,
-body.high-contrast .table_container {
     background-color: whitesmoke;
+    color: black;
 }
 
 body.high-contrast .team_img,
 body.high-contrast .athlete_img {
-    border: 3px solid white;
-    box-shadow: 0 0 4vw white;
+    border: 3px solid whitesmoke;
+    box-shadow: 0 0 4vw whitesmoke;
+}
+
+body.high-contrast #comment_box {
+    box-shadow: 0 0 4vw rgba(0, 0, 0, 0.5);
+}
+
+body.high-contrast tbody tr:nth-child(odd) .athlete_table_box,
+body.high-contrast #athlete_personal tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.high-contrast tbody tr:nth-child(even) .athlete_table_box,
+body.high-contrast tr:nth-child(even) #athlete_personal {
+    background-color: rgba(255, 255, 255, 0.5);
 }
