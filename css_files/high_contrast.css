@@ -1,16 +1,16 @@
-/* high-contrast Mode */
+/* High-Contrast Mode */
 
 * {
     font-weight: bolder;
 }
 
-body.high-contrast .skip_to_content {
-    color: whitesmoke;
-}
-
 body.high-contrast {
     color: black;
     background-color: whitesmoke;
+}
+
+body.high-contrast .skip_to_content {
+    color: whitesmoke;
 }
 
 body.high-contrast a,
@@ -55,6 +55,11 @@ body.high-contrast #athlete_personal tr:nth-child(odd) {
 }
 
 body.high-contrast tbody tr:nth-child(even) .athlete_table_box,
-body.high-contrast tr:nth-child(even) #athlete_personal {
+body.high-contrast #athlete_personal tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+body.high-contrast * {
+    transition: none !important;
+    animation: none !important;
 }

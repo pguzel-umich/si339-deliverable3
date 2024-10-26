@@ -28,7 +28,7 @@ body.light-mode #athlete_personal tr:nth-child(odd) {
 }
 
 body.light-mode tbody tr:nth-child(even) .athlete_table_box,
-body.light-mode tr:nth-child(even) #athlete_personal {
+body.light-mode #athlete_personal tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -38,5 +38,4 @@ body.light-mode th {
 
 body.light-mode .main_box #comment_box {
     background-color: rgba(52, 49, 49, 0.1);
-
 }
