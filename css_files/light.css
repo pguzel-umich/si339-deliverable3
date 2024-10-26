@@ -50,3 +50,9 @@ body.light-mode #athlete_personal tr:nth-child(odd) {
 body.light-mode #athlete_personal tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.02);
 }
+
+body.high-contrast #season_box th,
+body.high-contrast #season_box td {
+    border: 1px solid black;
+    padding: 8px;
+}

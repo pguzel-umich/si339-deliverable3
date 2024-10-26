@@ -262,11 +262,11 @@ def render_student_html(athlete_dict, template_html):
     <div id="season_box">
         <h2>Season Record</h2>
 
-        <table id="athlete_personal">
+        <table>
             <tr>
-                <th>Overall Place</th>
-                <th>Grade</th>
-                <th>Time</th>
+                <th>Year 📅</th>
+                <th>Grade 🏫</th>
+                <th>Time ⏱️</th>
             <tr>
             {season_record(athlete_dict)}
         </table>
@@ -276,11 +276,11 @@ def render_student_html(athlete_dict, template_html):
         <h3>Career Record</h3>
         <table id="athlete_personal">
             <tr>
-                <th id="important">Overall Place</th>
-                <th id="important">Time</th>
-                <th id="notimportant">Date</th>
-                <th id="important">Meet</th>
-                <th id="notimportant">Comments</th>
+                <th id="important">Overall Place 📊</th>
+                <th id="important">Time ⏱️</th>
+                <th id="notimportant">Date 📅</th>
+                <th id="important">Meet 🤝👨‍👨‍👧‍👦🏃</th>
+                <th id="notimportant">Comments 💬</th>
             <tr>
             {career_record(athlete_dict)}
         </table>

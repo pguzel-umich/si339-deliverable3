@@ -355,3 +355,9 @@ html {
 #athlete_personal tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.02);
 }
+
+#season_box th,
+#season_box td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
