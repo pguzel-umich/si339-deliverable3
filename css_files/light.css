@@ -9,8 +9,13 @@ body.light-mode h1 {
     color: #000;
 }
 
+body.light-mode .navbar #nav-links li a {
+    background-color: blue;
+    color: white;
+}
+
 body.light-mode .skip_to_content {
-    color: whitesmoke;
+    color: white;
 }
 
 body.light-mode .navbar {
@@ -19,23 +24,29 @@ body.light-mode .navbar {
 
 body.light-mode .athlete_table_box,
 body.light-mode .table_container {
+    background-color: white;
+}
+
+body.light-mode tbody tr:nth-child(odd) .athlete_table_box {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-body.light-mode tbody tr:nth-child(odd) .athlete_table_box,
-body.light-mode #athlete_personal tr:nth-child(odd) {
+body.light-mode tbody tr:nth-child(even) .athlete_table_box {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode tbody tr:nth-child(even) .athlete_table_box,
-body.light-mode #athlete_personal tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
 body.light-mode th {
-    background-color: rgb(235, 235, 235);
+    background-color: white;
 }
 
 body.light-mode .main_box #comment_box {
     background-color: rgba(52, 49, 49, 0.1);
+}
+
+body.light-mode #athlete_personal tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #athlete_personal tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
 }

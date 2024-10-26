@@ -154,20 +154,14 @@ tr th {
     z-index: 10;
 }
 
-tbody tr:nth-child(odd) .athlete_table_box,
-#athlete_personal tr:nth-child(odd),
-#seasonal th {
+tbody tr:nth-child(odd) .athlete_table_box {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 tbody tr:nth-child(even) .athlete_table_box {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-#seasonal tr:nth-child(even),
-#seasonal th {
-    background-color: rgba(255, 255, 255, 0.1);
-}
 
 /* images and athlete names */
 
@@ -351,4 +345,13 @@ html {
         transition: none !important;
         animation: none !important;
     }
+}
+
+
+#athlete_personal tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#athlete_personal tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
 }
