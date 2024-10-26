@@ -160,7 +160,7 @@ tbody tr:nth-child(odd) .athlete_table_box,
 }
 
 tbody tr:nth-child(even) .athlete_table_box,
-#athlete_personal tr:nth-child(even) {
+tr:nth-child(even) #athlete_personal {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
