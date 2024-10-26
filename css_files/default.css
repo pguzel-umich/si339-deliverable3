@@ -155,13 +155,18 @@ tr th {
 }
 
 tbody tr:nth-child(odd) .athlete_table_box,
-#athlete_personal tr:nth-child(odd) {
+#athlete_personal tr:nth-child(odd),
+#seasonal th {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-tbody tr:nth-child(even) .athlete_table_box,
-tr:nth-child(even) #athlete_personal {
-    background-color: rgba(255, 255, 255, 0.3);
+tbody tr:nth-child(even) .athlete_table_box {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#seasonal tr:nth-child(even),
+#seasonal th {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* images and athlete names */
