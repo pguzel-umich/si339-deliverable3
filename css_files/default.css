@@ -219,30 +219,6 @@ tbody tr:nth-child(even) .athlete_table_box {
     padding-left: 0px;
 }
 
-/* Styles for large screens */
-@media (min-width: 768px) {
-    .inner_table_container {
-        flex: auto;
-    }
-
-    .athlete_table_box {
-        align-items: center;
-    }
-
-    .main_box #comment_box {
-        width: 95%;
-    }
-}
-
-/* Styles for mini screens */
-@media (max-width: 350px) {
-    .table_container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-}
-
-
 /* athlete page specific */
 html {
     scroll-behavior: smooth;
@@ -285,16 +261,6 @@ html {
     font-size: 16px;
     text-decoration: none;
     border-radius: 4px;
-}
-
-@media (max-width: 600px) {
-    #notimportant {
-        display: none;
-    }
-
-    #important {
-        display: table-cell;
-    }
 }
 
 .athlete-performance {
@@ -360,4 +326,38 @@ html {
 #season_box td {
     border: 1px solid #ddd;
     padding: 8px;
+}
+
+
+@media (max-width: 600px) {
+    #notimportant {
+        display: none;
+    }
+
+    #important {
+        display: table-cell;
+    }
+}
+
+/* Styles for mini screens */
+@media (max-width: 350px) {
+    .table_container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Styles for large screens */
+@media (min-width: 768px) {
+    .inner_table_container {
+        flex: auto;
+    }
+
+    .athlete_table_box {
+        align-items: center;
+    }
+
+    .main_box #comment_box {
+        width: 95%;
+    }
 }
