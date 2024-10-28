@@ -253,7 +253,7 @@ def render_student_html(athlete_dict, template_html):
 
         <div class="athlete-performance">
             <div class="progress-container">
-                <div class="progress-bar" style="--progress: {random_value}%; --color: #4caf50;"></div>
+                <div class="progress-bar" style="--progress: {random_value}%;"></div>
             </div>
             <p style="font-weight: bold;">Performance over time bar is coming soon</p>
         </div>

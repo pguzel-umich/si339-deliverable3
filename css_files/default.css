@@ -279,7 +279,7 @@ html {
 .progress-bar {
     height: 30px;
     width: var(--progress);
-    background: var(--color);
+    background: #4caf50;
     border-radius: 25px;
     animation: progressAnimation 5s infinite;
 }
