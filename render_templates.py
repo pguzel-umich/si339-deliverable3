@@ -66,10 +66,7 @@ def template_table(athlete_list):
         # print(pretty_print)
         # For every athlete we want to add in a new row within our table
 
-        # Check if the athlete's image exists, else use the default image
         image_path = f"images/AthleteImages/{athlete_dict['id'][0]}.jpg"
-        if not os.path.exists(image_path):
-            image_path = "images/default_image.jpg"
 
         template_html += f"""
         <tr>
@@ -78,8 +75,10 @@ def template_table(athlete_list):
                     <a href="athlete_pages/{athlete_dict['id'][0]}.html" tabindex="-1"> 
                         <img src="{image_path}" class="athlete_img" alt="img of {athlete_dict['name'][0]}, id: {athlete_dict['id']}" width="100" height="100"> 
                     </a>
-                    <a href="athlete_pages/{athlete_dict['id'][0]}.html" class="athlete_name"> {athlete_dict['name'][0]} </a>
-                    <p>{athlete_dict['id'][0]}</p>
+                    <div id="athlete_name_box">
+                        <a href="athlete_pages/{athlete_dict['id'][0]}.html" class="athlete_name"> {athlete_dict['name'][0]} </a>
+                        <p>{athlete_dict['id'][0]}</p>
+                    </div>
                 </div>
             </td>
         </tr>
@@ -108,7 +107,8 @@ index_html_template = f"""
     <link rel="icon" type="images/icon.png" href="images/icon.png">
 
     <link rel="stylesheet" href="css_files/reset.css"> 
-    <link rel="stylesheet" href="css_files/default.css"> 
+    <link rel="stylesheet" href="css_files/default.css">
+    <link rel="stylesheet" href="css_files/screen_size.css"> 
     <link rel="stylesheet" href="css_files/light.css"> 
     <link rel="stylesheet" href="css_files/high_contrast.css"> 
 
@@ -128,7 +128,7 @@ index_html_template = f"""
 
     <div class="modes">
         <label for="theme-switch">Choose theme: </label>
-        <select id="theme-switch" class="theme-switch" onchange="document.body.className = this.value">
+        <select id="theme-switch" class="theme-switch">
             <option value="dark-mode">Default</option>
             <option value="light-mode">Light Mode</option>
             <option value="high-contrast">High Contrast</option>
@@ -186,11 +186,14 @@ index_html_template = f"""
                 <ul>
                     <li><a href="https://www.google.com/">Credidentials</a></li> 
                     <li><p>Charlie H from Deliverable 2</p></li>
-                    <li><p>Poyraz G from Deliverable 2 and 3</p></li>
+                    <li><p>Poyraz G from Deliverable 2, 3, and 4</p></li>
                 </ul> 
             </nav>
         </footer>
     </div>
+
+    <script src="js/javascript.js"></script>
+
 </body>
 </html>
 """
@@ -234,12 +237,7 @@ def career_record(athletic_dict):
 # print(career_record(athlete_data_male[0]))
 
 def render_student_html(athlete_dict, template_html):
-    image_path = f"images/AthleteImages/{athlete_dict['id'][0]}.jpg"
-    if not os.path.exists(image_path):
-        image_path = "images/default_image.jpg"
-    else:
-        image_path = f"../images/AthleteImages/{athlete_dict['id'][0]}.jpg"
-
+    image_path = f"../images/AthleteImages/{athlete_dict['id'][0]}.jpg"
 
     random_value = random.randint(25, 85)
 
@@ -286,6 +284,21 @@ def render_student_html(athlete_dict, template_html):
         </table>
     </div>
 
+    <!--Main box 4-->
+    <footer class="footer">
+        <nav>
+            <ul>
+                <li><a href="https://www.google.com/">Credidentials</a></li> 
+                <li><p>Charlie H from Deliverable 2</p></li>
+                <li><p>Poyraz G from Deliverable 2, 3, and 4</p></li>
+            </ul> 
+        </nav>
+    </footer>
+
+    <script src="../js/javascript.js"></script>
+
+</body>
+</html>
     """
     template_html += temp_html
     return template_html
@@ -309,6 +322,7 @@ student_html_template = f"""
 
     <link rel="stylesheet" href="../css_files/reset.css"> 
     <link rel="stylesheet" href="../css_files/default.css"> 
+    <link rel="stylesheet" href="../css_files/screen_size.css"> 
     <link rel="stylesheet" href="../css_files/light.css"> 
     <link rel="stylesheet" href="../css_files/high_contrast.css"> 
 

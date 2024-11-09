@@ -97,7 +97,6 @@ a:focus {
     backdrop-filter: blur(4px);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 40px;
-    padding: 2vw;
     max-height: 370px;
     overflow-y: auto;
 }
@@ -138,6 +137,16 @@ table {
     padding-bottom: 2vw;
     margin-bottom: 5px;
     border-radius: 10%;
+}
+
+#athlete_name_box {
+    padding-top: 5px;
+    max-width: 145px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 th,
@@ -186,21 +195,12 @@ tbody tr:nth-child(even) .athlete_table_box {
     border-radius: 50%;
     width: 35vw;
     height: 35vw;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 175px;
+    max-height: 175px;
 }
 
 #athletes h2 {
     text-align: center;
-}
-
-.athlete_name {
-    max-width: 145px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    border-radius: 5px;
 }
 
 /* Footer */
@@ -267,6 +267,8 @@ html {
     margin: 20px 0;
 }
 
+/* ANIMATIONS */
+
 .progress-container {
     width: 100%;
     background: #e0e0e0;
@@ -326,38 +328,4 @@ html {
 #season_box td {
     border: 1px solid #ddd;
     padding: 8px;
-}
-
-
-@media (max-width: 600px) {
-    #notimportant {
-        display: none;
-    }
-
-    #important {
-        display: table-cell;
-    }
-}
-
-/* Styles for mini screens */
-@media (max-width: 350px) {
-    .table_container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-}
-
-/* Styles for large screens */
-@media (min-width: 768px) {
-    .inner_table_container {
-        flex: auto;
-    }
-
-    .athlete_table_box {
-        align-items: center;
-    }
-
-    .main_box #comment_box {
-        width: 95%;
-    }
 }

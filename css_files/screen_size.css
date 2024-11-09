@@ -1,0 +1,107 @@
+@media (max-width: 600px) {
+    #notimportant {
+        display: none;
+    }
+
+    #important {
+        display: table-cell;
+    }
+}
+
+/* Styles for mini screens */
+@media (max-width: 350px) {
+    .table_container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Styles for large screens */
+@media (min-width: 768px) {
+    .inner_table_container {
+        flex: auto;
+    }
+
+    .main_box {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main_box #athletes {
+        width: 90%;
+        margin: none;
+        padding: none;
+    }
+
+    .athlete_name {
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .main_box #comment_box {
+        margin: 20px;
+        padding: 20px;
+
+    }
+
+    .main_box #comment_box p,
+    tr th {
+        font-size: 18px;
+        font-weight: 550;
+    }
+
+    .main_box #athletes .table_container {
+        max-height: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main_box #team_box,
+    .main_box #profile_box,
+    .main_box #season_box,
+    .main_box #record_box,
+    .main_box #comment_box {
+        padding: auto clamp(10px, 3vw, 40px);
+
+    }
+
+    #athletes h2 {
+        position: sticky;
+        top: 0;
+        background-color: #181818;
+        z-index: 10;
+    }
+
+
+    .athlete_table_box {
+        flex-direction: row;
+        text-align: left;
+        max-width: 548px;
+        border-radius: 75px;
+        padding: clamp(10px, 2vw, 20px);
+    }
+
+    .athlete_table_box p {
+        font-weight: normal;
+    }
+
+    #athlete_name_box {
+        padding: 10px;
+        max-width: none;
+        font-size: clamp(25px, 2vw, 3px);
+        line-height: normal;
+    }
+
+    .athlete_img {
+        max-width: 150px;
+        max-height: 150px;
+        padding: clamp(4px, 0.5vw, 6px);
+    }
+
+    #profile_box .athlete_img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+}
