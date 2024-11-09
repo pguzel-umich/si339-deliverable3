@@ -33,10 +33,17 @@ document.getElementById("theme-switch").addEventListener("change", function () {
 });
 
 function setColorScheme() {
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    lightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+    darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    highContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    lowContrast = window.matchMedia('(prefers-contrast: low)').matches;
+
+    if (lightMode) {
         document.body.className = 'light-mode';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    } else if (darkMode) {
         document.body.className = 'dark-mode';
+    } else if (highContrast || lowContrast) {
+        document.body.className = 'high-contrast';
     }
 };
 
