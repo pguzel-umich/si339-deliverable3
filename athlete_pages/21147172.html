@@ -32,7 +32,7 @@
         </ul>
     </div>
 
-    <a href="#record_box" class="skip_to_content">Skip to Content</a>
+    <a href="#main_content" class="skip_to_content">Skip to Content</a>
 
     <div class="modes">
         <label for="theme-switch">Choose theme: </label>
@@ -98,6 +98,11 @@
         </table>
     </div>
 
+    <div class="search_bar">
+        <label for="search_bar_id">Race Lookup:</label>
+        <input type="text" id="search_bar_id" placeholder="Search by race information...">
+    </div>
+
     <div id="record_box">
         <h3>Career Record</h3>
         <table id="athlete_personal">
@@ -109,7 +114,7 @@
                 <th id="notimportant">Comments 💬</th>
             <tr>
             
-            <tr>
+            <tr class="search_result">
                 <td id="important">57 </td>
                 <td id="important">20:10.0</td>
                 <td id="notimportant">Sep 7</td>
@@ -117,7 +122,7 @@
                 <td id="notimportant">Great run! If only we could bottle that energy for Monday mornings.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">32 </td>
                 <td id="important">20:36.0</td>
                 <td id="notimportant">Sep 10</td>
@@ -125,7 +130,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">74 </td>
                 <td id="important">19:52.1 SR</td>
                 <td id="notimportant">Sep 14</td>
@@ -133,7 +138,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">132 </td>
                 <td id="important">20:52.3</td>
                 <td id="notimportant">Aug 18</td>
@@ -141,7 +146,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">76 </td>
                 <td id="important">20:18.3</td>
                 <td id="notimportant">Aug 31</td>
@@ -149,7 +154,7 @@
                 <td id="notimportant">Are you sure you're not part cheetah? That was fast!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">66 </td>
                 <td id="important">20:18.7</td>
                 <td id="notimportant">Sep 13</td>
@@ -157,7 +162,7 @@
                 <td id="notimportant">You really pushed hard in that final mile, awesome finish!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">106 </td>
                 <td id="important">20:41.6</td>
                 <td id="notimportant">Sep 16</td>
@@ -165,7 +170,7 @@
                 <td id="notimportant">Nice job! You really finished strong.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">51 </td>
                 <td id="important">19:27.9PR</td>
                 <td id="notimportant">Sep 27</td>
@@ -173,7 +178,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">209 </td>
                 <td id="important">19:55.7</td>
                 <td id="notimportant">Oct 7</td>
@@ -181,7 +186,7 @@
                 <td id="notimportant">Great run! If only we could bottle that energy for Monday mornings.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">59 </td>
                 <td id="important">19:58.2</td>
                 <td id="notimportant">Oct 14</td>
@@ -189,7 +194,7 @@
                 <td id="notimportant">Great run! If only we could bottle that energy for Monday mornings.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">95 </td>
                 <td id="important">20:35.7</td>
                 <td id="notimportant">Oct 19</td>
@@ -197,7 +202,7 @@
                 <td id="notimportant">Awesome race! Let's look at where we can shave off a few more seconds.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">36 </td>
                 <td id="important">19:32.1</td>
                 <td id="notimportant">Oct 28</td>
@@ -205,7 +210,7 @@
                 <td id="notimportant">Awesome race! Let's look at where we can shave off a few more seconds.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">213 </td>
                 <td id="important">23:01.0</td>
                 <td id="notimportant">Sep 1</td>
@@ -213,7 +218,7 @@
                 <td id="notimportant">Super strong start! We'll work on keeping that energy the whole race.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">137 </td>
                 <td id="important">22:38.1</td>
                 <td id="notimportant">Sep 10</td>
@@ -221,7 +226,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">106 </td>
                 <td id="important">22:14.2</td>
                 <td id="notimportant">Sep 14</td>
@@ -229,7 +234,7 @@
                 <td id="notimportant">Your pacing was solid today. Let's focus on maintaining it throughout the race.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">113 </td>
                 <td id="important">22:52.2</td>
                 <td id="notimportant">Sep 28</td>
@@ -237,7 +242,7 @@
                 <td id="notimportant">Well, you didn’t set a world record, but you definitely set a team snack record!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">286 </td>
                 <td id="important">21:31.1</td>
                 <td id="notimportant">Oct 8</td>
@@ -245,7 +250,7 @@
                 <td id="notimportant">You made some great moves on the hills. Keep working on your endurance.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">143 </td>
                 <td id="important">20:58.0</td>
                 <td id="notimportant">Oct 15</td>
@@ -253,7 +258,7 @@
                 <td id="notimportant">You really pushed hard in that final mile, awesome finish!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">152 </td>
                 <td id="important">20:51.6 SR</td>
                 <td id="notimportant">Oct 20</td>
@@ -261,7 +266,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">118 </td>
                 <td id="important">21:17.5</td>
                 <td id="notimportant">Oct 27</td>

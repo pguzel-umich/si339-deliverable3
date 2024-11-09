@@ -32,7 +32,7 @@
         </ul>
     </div>
 
-    <a href="#record_box" class="skip_to_content">Skip to Content</a>
+    <a href="#main_content" class="skip_to_content">Skip to Content</a>
 
     <div class="modes">
         <label for="theme-switch">Choose theme: </label>
@@ -61,7 +61,7 @@
 
         <div class="athlete-performance">
             <div class="progress-container">
-                <div class="progress-bar" style="--progress: 75%;"></div>
+                <div class="progress-bar" style="--progress: 49%;"></div>
             </div>
             <p style="font-weight: bold;">Performance over time bar is coming soon</p>
         </div>
@@ -92,6 +92,11 @@
         </table>
     </div>
 
+    <div class="search_bar">
+        <label for="search_bar_id">Race Lookup:</label>
+        <input type="text" id="search_bar_id" placeholder="Search by race information...">
+    </div>
+
     <div id="record_box">
         <h3>Career Record</h3>
         <table id="athlete_personal">
@@ -103,7 +108,7 @@
                 <th id="notimportant">Comments 💬</th>
             <tr>
             
-            <tr>
+            <tr class="search_result">
                 <td id="important">23 </td>
                 <td id="important">17:35.1 SR</td>
                 <td id="notimportant">Aug 29</td>
@@ -111,7 +116,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">34 </td>
                 <td id="important">18:25.6</td>
                 <td id="notimportant">Aug 31</td>
@@ -119,7 +124,7 @@
                 <td id="notimportant">Fantastic run! Let's keep building on this for the next race.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">7 </td>
                 <td id="important">17:24.0</td>
                 <td id="notimportant">Oct 7</td>
@@ -127,7 +132,7 @@
                 <td id="notimportant">You fought hard all the way through, great resilience!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">51 </td>
                 <td id="important">18:23.7</td>
                 <td id="notimportant">Oct 14</td>
@@ -135,7 +140,7 @@
                 <td id="notimportant">Solid performance today! We'll fine-tune things in practice.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">30 </td>
                 <td id="important">17:43.9</td>
                 <td id="notimportant">Oct 19</td>
@@ -143,7 +148,7 @@
                 <td id="notimportant">Well, you didn’t set a world record, but you definitely set a team snack record!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">26 </td>
                 <td id="important">17:14.9PR</td>
                 <td id="notimportant">Oct 28</td>
@@ -151,7 +156,7 @@
                 <td id="notimportant">I think you might've outrun the course map! Keep it up, and we’ll need GPS tracking.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">248 </td>
                 <td id="important">17:50.0</td>
                 <td id="notimportant">Nov 4</td>

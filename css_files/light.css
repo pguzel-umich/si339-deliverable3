@@ -9,6 +9,10 @@ body.light-mode h1 {
     color: #000;
 }
 
+body.light-mode #athletes h2 {
+    background-color: whitesmoke;
+}
+
 body.light-mode .navbar #nav-links li a {
     background-color: blue;
     color: white;

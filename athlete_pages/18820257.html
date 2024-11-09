@@ -32,7 +32,7 @@
         </ul>
     </div>
 
-    <a href="#record_box" class="skip_to_content">Skip to Content</a>
+    <a href="#main_content" class="skip_to_content">Skip to Content</a>
 
     <div class="modes">
         <label for="theme-switch">Choose theme: </label>
@@ -61,7 +61,7 @@
 
         <div class="athlete-performance">
             <div class="progress-container">
-                <div class="progress-bar" style="--progress: 78%;"></div>
+                <div class="progress-bar" style="--progress: 63%;"></div>
             </div>
             <p style="font-weight: bold;">Performance over time bar is coming soon</p>
         </div>
@@ -104,6 +104,11 @@
         </table>
     </div>
 
+    <div class="search_bar">
+        <label for="search_bar_id">Race Lookup:</label>
+        <input type="text" id="search_bar_id" placeholder="Search by race information...">
+    </div>
+
     <div id="record_box">
         <h3>Career Record</h3>
         <table id="athlete_personal">
@@ -115,7 +120,7 @@
                 <th id="notimportant">Comments 💬</th>
             <tr>
             
-            <tr>
+            <tr class="search_result">
                 <td id="important">77 </td>
                 <td id="important">19:01.8</td>
                 <td id="notimportant">Aug 29</td>
@@ -123,7 +128,7 @@
                 <td id="notimportant">Solid performance today! We'll fine-tune things in practice.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">56 </td>
                 <td id="important">18:19.1PR</td>
                 <td id="notimportant">Sep 7</td>
@@ -131,7 +136,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">-- </td>
                 <td id="important"></td>
                 <td id="notimportant">Sep 10</td>
@@ -139,7 +144,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">15 </td>
                 <td id="important">18:21.8</td>
                 <td id="notimportant">Sep 14</td>
@@ -147,7 +152,7 @@
                 <td id="notimportant">I blinked and missed the first half of your race! That was quick!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">108 </td>
                 <td id="important">19:21.2</td>
                 <td id="notimportant">Aug 18</td>
@@ -155,7 +160,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">57 </td>
                 <td id="important">19:30.2</td>
                 <td id="notimportant">Aug 31</td>
@@ -163,7 +168,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">72 </td>
                 <td id="important">19:20.2</td>
                 <td id="notimportant">Sep 9</td>
@@ -171,7 +176,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">96 </td>
                 <td id="important">19:20.6</td>
                 <td id="notimportant">Sep 13</td>
@@ -179,7 +184,7 @@
                 <td id="notimportant">Nice job! You really finished strong.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">221 </td>
                 <td id="important">19:37.6</td>
                 <td id="notimportant">Sep 23</td>
@@ -187,7 +192,7 @@
                 <td id="notimportant">Nice job! You really finished strong.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">30 </td>
                 <td id="important">18:53.7 SR</td>
                 <td id="notimportant">Sep 27</td>
@@ -195,7 +200,7 @@
                 <td id="notimportant">Your speed was impressive, but next time, try not to leave the spectators in the dust... literally!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">131 </td>
                 <td id="important">19:09.5</td>
                 <td id="notimportant">Oct 7</td>
@@ -203,7 +208,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">26 </td>
                 <td id="important">19:08.9</td>
                 <td id="notimportant">Oct 14</td>
@@ -211,7 +216,7 @@
                 <td id="notimportant">I think you might've outrun the course map! Keep it up, and we’ll need GPS tracking.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">23 </td>
                 <td id="important">18:55.0</td>
                 <td id="notimportant">Oct 28</td>
@@ -219,7 +224,7 @@
                 <td id="notimportant">I blinked and missed the first half of your race! That was quick!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">118 </td>
                 <td id="important">20:24.7</td>
                 <td id="notimportant">Aug 19</td>
@@ -227,7 +232,7 @@
                 <td id="notimportant">You really pushed hard in that final mile, awesome finish!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">128 </td>
                 <td id="important">20:22.7</td>
                 <td id="notimportant">Sep 1</td>
@@ -235,7 +240,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">62 </td>
                 <td id="important">20:39.8</td>
                 <td id="notimportant">Sep 10</td>
@@ -243,7 +248,7 @@
                 <td id="notimportant">I think you might've outrun the course map! Keep it up, and we’ll need GPS tracking.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">152 </td>
                 <td id="important">19:57.9</td>
                 <td id="notimportant">Sep 24</td>
@@ -251,7 +256,7 @@
                 <td id="notimportant">You really pushed hard in that final mile, awesome finish!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">65 </td>
                 <td id="important">20:22.3</td>
                 <td id="notimportant">Sep 28</td>
@@ -259,7 +264,7 @@
                 <td id="notimportant">Excellent job maintaining a steady pace!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">250 </td>
                 <td id="important">20:41.8</td>
                 <td id="notimportant">Oct 8</td>
@@ -267,7 +272,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">116 </td>
                 <td id="important">19:45.5 SR</td>
                 <td id="notimportant">Oct 20</td>
@@ -275,7 +280,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">91 </td>
                 <td id="important">20:26.0</td>
                 <td id="notimportant">Oct 27</td>
@@ -283,7 +288,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">210 </td>
                 <td id="important">24:32.0</td>
                 <td id="notimportant">Sep 25</td>
@@ -291,7 +296,7 @@
                 <td id="notimportant">Solid performance today! We'll fine-tune things in practice.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">-- </td>
                 <td id="important">DNF</td>
                 <td id="notimportant">Sep 28</td>
@@ -299,7 +304,7 @@
                 <td id="notimportant">You were flying today! Keep up that momentum!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">231 </td>
                 <td id="important">23:41.0</td>
                 <td id="notimportant">Oct 16</td>
@@ -307,7 +312,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">200 </td>
                 <td id="important">23:31.3</td>
                 <td id="notimportant">Oct 21</td>
@@ -315,7 +320,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">102 </td>
                 <td id="important">23:27.6</td>
                 <td id="notimportant">Oct 29</td>
@@ -323,7 +328,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">116 </td>
                 <td id="important">23:17.9 SR</td>
                 <td id="notimportant">Nov 2</td>

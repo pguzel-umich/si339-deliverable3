@@ -32,7 +32,7 @@
         </ul>
     </div>
 
-    <a href="#record_box" class="skip_to_content">Skip to Content</a>
+    <a href="#main_content" class="skip_to_content">Skip to Content</a>
 
     <div class="modes">
         <label for="theme-switch">Choose theme: </label>
@@ -61,7 +61,7 @@
 
         <div class="athlete-performance">
             <div class="progress-container">
-                <div class="progress-bar" style="--progress: 48%;"></div>
+                <div class="progress-bar" style="--progress: 64%;"></div>
             </div>
             <p style="font-weight: bold;">Performance over time bar is coming soon</p>
         </div>
@@ -86,6 +86,11 @@
         </table>
     </div>
 
+    <div class="search_bar">
+        <label for="search_bar_id">Race Lookup:</label>
+        <input type="text" id="search_bar_id" placeholder="Search by race information...">
+    </div>
+
     <div id="record_box">
         <h3>Career Record</h3>
         <table id="athlete_personal">
@@ -97,7 +102,7 @@
                 <th id="notimportant">Comments 💬</th>
             <tr>
             
-            <tr>
+            <tr class="search_result">
                 <td id="important">18 </td>
                 <td id="important">21:22.3</td>
                 <td id="notimportant">Aug 29</td>
@@ -105,7 +110,7 @@
                 <td id="notimportant">Your speed was impressive, but next time, try not to leave the spectators in the dust... literally!</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">22 </td>
                 <td id="important">20:34.3PR</td>
                 <td id="notimportant">Sep 7</td>
@@ -113,7 +118,7 @@
                 <td id="notimportant"></td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">-- </td>
                 <td id="important"></td>
                 <td id="notimportant">Sep 10</td>
@@ -121,7 +126,7 @@
                 <td id="notimportant">I think you might've outrun the course map! Keep it up, and we’ll need GPS tracking.</td>
             </tr>
         
-            <tr>
+            <tr class="search_result">
                 <td id="important">45 </td>
                 <td id="important">21:52.3</td>
                 <td id="notimportant">Sep 14</td>

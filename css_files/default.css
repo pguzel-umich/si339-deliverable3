@@ -1,4 +1,4 @@
-/* Dark Mode */
+/* GLOBAL & DARK MODE */
 body {
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
@@ -24,6 +24,10 @@ a.athlete_name:focus,
 
 a:visited {
     background-color: rgb(173, 23, 173);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* navbar and modes*/
@@ -114,7 +118,7 @@ table {
 
 .table_container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     text-align: center;
     margin-left: 2vw;
@@ -220,9 +224,6 @@ tbody tr:nth-child(even) .athlete_table_box {
 }
 
 /* athlete page specific */
-html {
-    scroll-behavior: smooth;
-}
 
 .fab {
     position: fixed;
@@ -251,7 +252,8 @@ html {
     transform: scale(1.1);
 }
 
-.skip_to_content {
+.skip_to_content,
+.skip_to_content_main {
     display: block;
     width: fit-content;
     margin: 15px auto;
@@ -261,6 +263,19 @@ html {
     font-size: 16px;
     text-decoration: none;
     border-radius: 4px;
+}
+
+.skip_to_content_main {
+    position: fixed;
+    top: -10px;
+    left: 25px;
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.skip_to_content_main:focus {
+    opacity: 1;
+    top: 75px;
 }
 
 .athlete-performance {
@@ -308,14 +323,6 @@ html {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
-        animation: none !important;
-    }
-}
-
-
 #athlete_personal tr:nth-child(odd) {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -328,4 +335,46 @@ html {
 #season_box td {
     border: 1px solid #ddd;
     padding: 8px;
+}
+
+#notimportant {
+    display: none;
+}
+
+#important {
+    display: table-cell;
+}
+
+.search_bar {
+    margin: 10px;
+}
+
+#search_bar_id {
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.search_result {
+    transition: opacity 0.5s ease
+}
+
+.search_fade_out {
+    opacity: 0;
+}
+
+.search_hidden {
+    display: none;
+}
+
+label[for="search_bar_id"] {
+    font-size: 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
 }

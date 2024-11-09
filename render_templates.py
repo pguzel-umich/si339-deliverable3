@@ -69,7 +69,7 @@ def template_table(athlete_list):
         image_path = f"images/AthleteImages/{athlete_dict['id'][0]}.jpg"
 
         template_html += f"""
-        <tr>
+        <tr class="search_result">
             <td>
                 <div class="athlete_table_box">                    
                     <a href="athlete_pages/{athlete_dict['id'][0]}.html" tabindex="-1"> 
@@ -126,10 +126,13 @@ index_html_template = f"""
         </ul>
     </div>
 
+    <a href="#search_bar_id" class="skip_to_content_main" tabindex=1>Skip to Content</a>
+
     <div class="modes">
         <label for="theme-switch">Choose theme: </label>
         <select id="theme-switch" class="theme-switch">
-            <option value="dark-mode">Default</option>
+            <option value="" selected disabled>Select Theme</option>
+            <option value="dark-mode">Dark Mode</option>
             <option value="light-mode">Light Mode</option>
             <option value="high-contrast">High Contrast</option>
         </select>
@@ -151,6 +154,11 @@ index_html_template = f"""
             <div>
                 <p>Team Comments and Announcements goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac risus id sem egestas mattis. Proin pellentesque diam eu orci tincidunt, sit amet congue quam tempor. Donec vulputate ligula eu eleifend viverra. Aenean congue aliquet dui et accumsan. Proin vulputate nisi et dolor convallis aliquam.</p>
             </div>
+        </div>
+
+        <div class="search_bar">
+            <label for="search_bar_id" id="main_content">Athlete Lookup:</label>
+            <input type="text" id="search_bar_id" placeholder="Search by name or ID...">
         </div>
 
         <!--Main box 3-->
@@ -221,7 +229,7 @@ def career_record(athletic_dict):
     # Loop over all the races an athlete has done
     for record in athletic_dict['career']:
         temp_html += f"""
-            <tr>
+            <tr class="search_result">
                 <td id="important">{record[1]}</td>
                 <td id="important">{record[3]}</td>
                 <td id="notimportant">{record[4]}</td>
@@ -268,6 +276,11 @@ def render_student_html(athlete_dict, template_html):
             <tr>
             {season_record(athlete_dict)}
         </table>
+    </div>
+
+    <div class="search_bar">
+        <label for="search_bar_id">Race Lookup:</label>
+        <input type="text" id="search_bar_id" placeholder="Search by race information...">
     </div>
 
     <div id="record_box">
@@ -344,7 +357,7 @@ student_html_template = f"""
         </ul>
     </div>
 
-    <a href="#record_box" class="skip_to_content">Skip to Content</a>
+    <a href="#main_content" class="skip_to_content">Skip to Content</a>
 
     <div class="modes">
         <label for="theme-switch">Choose theme: </label>
