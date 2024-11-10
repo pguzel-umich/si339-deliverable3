@@ -32,6 +32,7 @@ document.getElementById("theme-switch").addEventListener("change", function () {
     document.body.className = this.value;
 });
 
+// COLOR SCHEME DETECTOR
 function setColorScheme() {
     lightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
     darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
