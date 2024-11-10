@@ -361,8 +361,9 @@ student_html_template = f"""
 
     <div class="modes">
         <label for="theme-switch">Choose theme: </label>
-        <select id="theme-switch" class="theme-switch" onchange="document.body.className = this.value">
-            <option value="dark-mode">Default</option>
+        <select id="theme-switch" class="theme-switch">
+            <option value="" selected disabled>Select Theme</option>
+            <option value="dark-mode">Dark Mode</option>
             <option value="light-mode">Light Mode</option>
             <option value="high-contrast">High Contrast</option>
         </select>
