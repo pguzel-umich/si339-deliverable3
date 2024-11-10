@@ -278,7 +278,7 @@ def render_student_html(athlete_dict, template_html):
         </table>
     </div>
 
-    <div class="search_bar">
+    <div class="search_bar" id="main_content">
         <label for="search_bar_id">Race Lookup:</label>
         <input type="text" id="search_bar_id" placeholder="Search by race information...">
     </div>

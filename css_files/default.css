@@ -267,14 +267,12 @@ tbody tr:nth-child(even) .athlete_table_box {
 
 .skip_to_content_main {
     position: fixed;
-    top: -10px;
+    top: -100px;
     left: 25px;
-    opacity: 0;
-    transition: opacity 0.3s ease, top 0.3s ease;
+    transition: top 0.3s ease;
 }
 
 .skip_to_content_main:focus {
-    opacity: 1;
     top: 75px;
 }
 
