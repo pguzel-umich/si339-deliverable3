@@ -27,8 +27,8 @@ function setimage_path() {
 };
 
 // COLOR SCHEME SELECTOR
-
 document.getElementById("theme-switch").addEventListener("change", function () {
+    console.log("Color scheme preference has been changed to ", this.value);
     document.body.className = this.value;
 });
 
@@ -40,15 +40,21 @@ function setColorScheme() {
 
     if (lightMode) {
         document.body.className = 'light-mode';
+        console.log("Color scheme has been set to light-mode");
     } else if (darkMode) {
         document.body.className = 'dark-mode';
+        console.log("Color scheme has been set to dark-mode");
     } else if (highContrast || lowContrast) {
         document.body.className = 'high-contrast';
+        console.log("Color scheme has been set to high-contrast");
+    } else {
+        document.body.className = 'dark-mode';
+        console.log("Color scheme has been set automatically to dark-mode");
+
     }
 };
 
 // SEARCH BAR
-
 function searchBar() {
     searchBar = document.getElementById('search_bar_id');
     results = document.querySelectorAll('.search_result');

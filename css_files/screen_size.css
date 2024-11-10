@@ -1,13 +1,14 @@
-@media (min-width: 600px) {
-    #notimportant {
-        display: table-cell;
-    }
-}
-
 /* Styles for mini screens */
 @media (min-width: 350px) {
     .table_container {
         flex-direction: row;
+    }
+}
+
+/* Styles for medium screens */
+@media (min-width: 600px) {
+    #notimportant {
+        display: table-cell;
     }
 }
 
